@@ -9,16 +9,16 @@ const links = document.querySelectorAll('.dropdown-menu li');
 const aElement = document.querySelector('.hamburger a');
 
 hamburger.addEventListener('click', (e) => {
-
     dropdown.classList.toggle('open');
     aElement.classList.toggle('open');
-
-    links.forEach( link => {
-        link.classList.toggle('fade');
-    });
-
     e.preventDefault();
+});
 
+links.forEach( link => {
+    link.addEventListener('click', () => {
+        dropdown.classList.toggle('open');
+        aElement.classList.toggle('open');
+    });    
 });
 
 
@@ -31,14 +31,12 @@ const header = document.querySelector('header');
 const headerOffset = header.offsetTop;
 
     window.addEventListener('scroll', () => {
-
         if ( pageYOffset > headerOffset ) {
             header.classList.add('fromTheTop')
         }
         else if ( pageYOffset === headerOffset ) {
             header.classList.remove('fromTheTop')
         }
-
     });
 
 
@@ -50,14 +48,12 @@ const headerOffset = header.offsetTop;
 const backToTop = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', () => {
-
     if ( pageYOffset >= 100 ) {
         backToTop.classList.add('show')
     }
     else {
         backToTop.classList.remove('show')
     }
-
 });
 
 
@@ -85,8 +81,6 @@ const images = document.querySelectorAll('img');
     });
 
 lightbox.addEventListener('click', e => {
-
     if ( e.target !== e.currentTarget ) return;
-
     lightbox.classList.remove('active');
 });
