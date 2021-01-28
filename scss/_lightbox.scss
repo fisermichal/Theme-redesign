@@ -31,11 +31,11 @@
 }
 
 #lightbox img {
-    width: 60%;
+    width: 40%;
     height: auto;
     padding: 4px;
-    //background: $color-secondary;
-    //border: 2px solid $color-bg-body;
+    background: $color-grey;
+    border: 2px solid $color-white;
     border-radius: 10px;
 
     @media ( max-width: $width-lg ) {

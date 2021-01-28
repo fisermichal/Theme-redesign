@@ -206,6 +206,7 @@
 .about-main-item img {
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .about-main-item:nth-child(1) {
@@ -434,6 +435,7 @@
     img {
         height: 100%;
         object-fit: cover;
+        cursor: pointer;
     }
     &:nth-child(10) {
         position: relative;

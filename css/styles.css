@@ -188,9 +188,11 @@ footer {
   to {
     opacity: 1; } }
 #lightbox img {
-  width: 60%;
+  width: 40%;
   height: auto;
   padding: 4px;
+  background: #343434;
+  border: 2px solid #ffffff;
   border-radius: 10px; }
   @media (max-width: 800px) {
     #lightbox img {
@@ -341,7 +343,8 @@ footer {
 
 .about-main-item img {
   height: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+  cursor: pointer; }
 
 .about-main-item:nth-child(1) {
   grid-column: 1;
@@ -508,7 +511,8 @@ footer {
 
 .why-main-item img {
   height: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+  cursor: pointer; }
 .why-main-item:nth-child(10) {
   position: relative;
   padding: 1.25em; }
