@@ -1,0 +1,102 @@
+//
+//	HEADER
+// ------------------------------------------------------ /
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+
+    &.fromTheTop {        
+        position: sticky;
+        top: 0.1px;
+        background: transparentize($color-white, 0.1);
+        border-bottom: 1px solid $color-black;
+        z-index: 10;
+    }
+}
+
+.menu {
+    a {
+        transition: all .2s;
+        font: {
+            size: em(22);
+            weight: 300;
+        }
+        &:hover {
+            color: $color-red;
+        }
+    }
+    li {
+        padding: 0 em(20);
+    }
+    @media ( max-width: $width-lg ) {
+        display: none;
+    }
+}
+
+.hamburger {
+    display: none;
+    z-index: 3;
+    @media ( max-width: $width-lg ) {
+        display: block;
+    }
+    a.open {
+        color: $color-white;
+    }
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: -800px;
+    width: 0;
+    height: 100vh;
+    list-style-type: none;
+    z-index: 2;
+    background: transparentize($color-black, 0.1);
+    transition: all .7s ease-in-out;
+    overflow-x: hidden;
+
+    & a {
+        color: $color-white;
+        font: {
+            size: 50px;
+            weight: bold;
+        }
+    }
+
+    &.open {
+        width: 100%;
+        right: 0;
+    }    
+
+    & li.fade {
+        opacity: 1;
+    }
+
+    & li {
+        opacity: 0;
+    }
+
+    & li:nth-child(1){
+        transition: ease-out 0.5s 0.5s;
+    }
+    & li:nth-child(2){
+        transition: ease-out 0.5s 0.6s;    
+    }
+    & li:nth-child(3){
+        transition: ease-out 0.5s 0.7s;
+    }
+    & li:nth-child(4){
+        transition: ease-out 0.5s 0.8s;
+    }
+    & li:nth-child(5){
+        transition: ease-out 0.5s 0.9s;
+    }
+}

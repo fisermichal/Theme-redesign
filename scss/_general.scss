@@ -1,0 +1,46 @@
+//
+//	GENERAL
+// ------------------------------------------------------ /
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    color: $color-black;
+    background-color: $color-white;
+    font-family: $font-family;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: em(1300);
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+a {
+    text-decoration: none;
+    color: $color-black;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+    vertical-align: middle;
+}
+
+.menu {
+    list-style: none;
+    li {
+        display: inline-block;
+    }
+}
