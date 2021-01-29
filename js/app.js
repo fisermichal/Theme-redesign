@@ -9,16 +9,23 @@ const links = document.querySelectorAll('.dropdown-menu li');
 const aElement = document.querySelector('.hamburger a');
 
 hamburger.addEventListener('click', (e) => {
+
     dropdown.classList.toggle('open');
     aElement.classList.toggle('open');
+
     e.preventDefault();
+
 });
 
 links.forEach( link => {
+
     link.addEventListener('click', () => {
+
         dropdown.classList.toggle('open');
         aElement.classList.toggle('open');
+
     });    
+
 });
 
 
@@ -31,12 +38,14 @@ const header = document.querySelector('header');
 const headerOffset = header.offsetTop;
 
     window.addEventListener('scroll', () => {
+
         if ( pageYOffset > headerOffset ) {
             header.classList.add('fromTheTop')
-        }
+        }        
         else if ( pageYOffset === headerOffset ) {
             header.classList.remove('fromTheTop')
         }
+
     });
 
 
@@ -48,12 +57,14 @@ const headerOffset = header.offsetTop;
 const backToTop = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', () => {
+
     if ( pageYOffset >= 100 ) {
         backToTop.classList.add('show')
     }
     else {
         backToTop.classList.remove('show')
     }
+
 });
 
 
@@ -61,26 +72,34 @@ window.addEventListener('scroll', () => {
 //  LIGHTBOX
 //
 
-
+const images = document.querySelectorAll('img');
 const lightbox = document.createElement('div');
 lightbox.id = 'lightbox';
 document.body.appendChild(lightbox);
 
-const images = document.querySelectorAll('img');
+images.forEach( image => {
 
-    images.forEach( image => {
-        image.addEventListener('click', e => {
-            lightbox.classList.add('active');
-            const img = document.createElement('img');
-            img.src = image.src;
-            while (lightbox.firstChild) {
-                lightbox.removeChild(lightbox.firstChild);
-            }
-            lightbox.appendChild(img);
-        });
+    image.addEventListener('click', e => {
+
+        const img = document.createElement('img');
+        lightbox.classList.add('active');        
+        img.src = image.src;
+
+        while (lightbox.firstChild) {
+
+            lightbox.removeChild(lightbox.firstChild);
+        }
+
+        lightbox.appendChild(img);
+        
     });
 
+});
+
 lightbox.addEventListener('click', e => {
+
     if ( e.target !== e.currentTarget ) return;
+
     lightbox.classList.remove('active');
+
 });
