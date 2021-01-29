@@ -622,6 +622,7 @@
     a {
         padding: em(15) em(40);
         border: 2px solid $color-red;
+        border-radius: 5px;
         font-weight: bold;
         transition: all .3s;
         &:hover {
