@@ -74,11 +74,11 @@ header {
 .hamburger {
   display: none;
   z-index: 3; }
+  .hamburger a.open {
+    color: #ffffff; }
   @media (max-width: 800px) {
     .hamburger {
       display: block; } }
-  .hamburger a.open {
-    color: #ffffff; }
 
 .dropdown-menu {
   display: flex;

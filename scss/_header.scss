@@ -2,6 +2,7 @@
 //	HEADER
 // ------------------------------------------------------ /
 
+
 header {
     display: flex;
     justify-content: space-around;
@@ -37,6 +38,7 @@ header {
     li {
         padding: 0 em(20);
     }
+
     @media ( max-width: $width-lg ) {
         display: none;
     }
@@ -45,12 +47,13 @@ header {
 .hamburger {
     display: none;
     z-index: 3;
-    @media ( max-width: $width-lg ) {
-        display: block;
-    }
     a.open {
         color: $color-white;
     }
+
+    @media ( max-width: $width-lg ) {
+        display: block;
+    }    
 }
 
 .dropdown-menu {
@@ -68,11 +71,9 @@ header {
     background: transparentize($color-black, 0.1);
     transition: all .7s ease-in-out;
     overflow-x: hidden;
-
     & li {
         margin: 1em 0;
     }
-
     & a {
         color: $color-white;
         font: {
@@ -80,7 +81,6 @@ header {
             weight: bold;
         }
     }
-
     &.open {
         width: 100%;
         right: 0;

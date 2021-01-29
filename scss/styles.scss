@@ -4,11 +4,10 @@
 
 
 @import 'variables';      // variables
-@import 'mixins';         // functions and mixins ok
-@import 'general';        // global rules ok
-@import 'typography';     // font n stuff ok
-@import 'header';         // navigation ok
-@import 'footer';         // footer ok
-@import 'lightbox';       // lightbox ok
-
-@import 'home';          // home page
+@import 'mixins';         // mixins
+@import 'general';        // global rules
+@import 'typography';     // font n stuff
+@import 'header';         // navigation
+@import 'footer';         // footer
+@import 'lightbox';       // lightbox
+@import 'home';           // home page styles
